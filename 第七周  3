@@ -1,0 +1,138 @@
+<!----------------padding test------------------>
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style type="text/css">
+   *{padding:0;margin:0;} 
+   .box{width:250px;height:100px;background:gray;border:10px dotted #666;padding-left:10px;padding-right:10px}
+   .box1{height:60px;
+   height:40px;
+   background-color:red}
+  </style>
+ </head>
+ <body>
+  <div class="box">
+	[资讯]港澳通行证即签即走
+	[天气]长沙元旦气温回升
+	[望城]独栋别墅全款享96折
+	[星沙]N+1户型
+	[暮云]生态住宅
+	<div class="box1"></div>
+  </div>
+ </body>
+</html>
+
+
+
+<!---------------------------相册练习-------------------------------->
+<!DOCTYPE html>
+    <html lang="en">
+	<head>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="keywords" content="关键词,关键词">
+		<meta name="description" content="">
+        <title ></title>
+        <style type="text/css">
+        *{padding:0;margin: 0}
+        body{background: #ddd;position: relative;}
+        #container{width: 1000px;
+        height: 650px;
+        margin: 50px auto}
+        #container ul li{width: 300px;
+        height: 187px;
+       padding: 10px;
+        list-style: none;
+        float: left;}
+        #container ul li img{width: 300px;height: 187px;
+        border: 4px solid white;
+        box-shadow:4px 6px 14px #000;}
+        .showImg{width: 700px;height: 430px;background-color: wheat;position: absolute;
+        top: 120px;left: 50%;
+        margin-left: -350px;
+        display: none;
+        z-index: 1;}
+        .showImg img.big{width: 100%;
+        height: 100%;
+        border: 10px solid #fff;
+        box-shadow:  0px 0px 30px rgb(255, 148, 27)}
+        .showImg img.dirl{position: absolute;
+        top: 50%;
+        margin-top: -17.5px;
+        left: -45px;
+        }
+        .showImg img.dirr{position: absolute;
+        top: 50%;
+        margin-top: -17.5px;
+        right: -50px;
+        }
+       .gray{height: 100%;width: 100%;background: rgba(0,0,0,0.5);display: none;
+        position: fixed;
+        top: 0;
+        left: 0;}
+		</style>
+	</head>
+	<body>
+        <div id="container">
+            <ul>
+                <li><img src="images/0.jpg"/></li>
+                <li><img src="images/1.jpg"/></li>
+                <li><img src="images/2.jpg"/></li>
+                <li><img src="images/3.jpg"/></li>
+                <li><img src="images/4.jpg"/></li>
+                <li><img src="images/5.jpg"/></li>
+                <li><img src="images/6.jpg"/></li>
+                <li><img src="images/7.jpg"/></li>
+                <li><img src="images/8.jpg"/></li>
+            </ul>
+        </div>
+        <div class="showImg">
+            <img src="images/4.jpg"  class="big"alt=""/>
+            <img src="images/dirl.png" class="dirl"alt=""/>
+            <img src="images/dirr.png"  class="dirr" alt=""/>
+        </div>
+        <div class="gray">
+
+        </div>
+        <script src="js/jquery.js">
+
+        </script>
+        <script>
+            //alert($)
+        $(function(){
+            var _index=0;
+            var dImgsrc="";
+            $("#container ul li").click(function(){
+            $(".showImg").show();
+            $(".gray").show();
+            _index=$(this).index();
+            var dImgsrc=$(this).find("img").attr("src");
+            $(".showImg .big").attr("src",dImgsrc);
+
+            });
+            $(".showImg img.dirl").click(function(){
+                _index--;
+                if(_index<0){_index=8}
+                dImgsrc=$("#container ul li").eq(_index).find("img").attr("src");
+                $(".showImg .big").attr("src",dImgsrc);
+            })
+            $(".showImg img.dirr").click(function(){
+                _index++;
+                if(_index>8){_index=0}
+                dImgsrc=$("#container ul li").eq(_index).find("img").attr("src");
+                $(".showImg .big").attr("src",dImgsrc);
+            })
+            $(".gray").click(function(){
+                $(this).hide();
+                $(".showImg").hide();
+            })
+        })
+        </script>
+    </body>
+    </html>
