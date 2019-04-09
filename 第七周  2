@@ -1,0 +1,142 @@
+<!-------------------这里是两个天猫导航模仿块------------------------>
+
+<!--------------导航一------------------>
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style type="text/css">
+  #qrcode{
+  width:175px;
+  height:30px;
+  border:1px solid red;
+  background:url("images/1.png") no-repeat;
+  background-position:1px 7px;
+  position: relative;}
+  #qrcode .qrcode_img{
+    width: 175px;
+    height: 227px; 
+    position: absolute ;top:31px;left:0px;
+    display: none}
+  #qrcode span{display: block;line-height: 30px;height: 30px;text-indent: 70px;}
+  #qrcode:hover .qrcode_img{display: block;}
+  </style>
+ </head>
+ <body>
+  <div id="qrcode">
+    <span>手机</span>
+	<div class="qrcode_img">
+    <a href="#"><img src="images/qrcode.png" alt=""></a>
+  </div>
+  </div>
+ </body>
+</html>
+
+<!-----------------分割线---------------------->
+
+<!--------------导航二------------------>
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>一号店2</title>
+  <style type="text/css">
+  *{margin: 0;padding: 0;}
+  #Menu{
+    width: 230px;
+    height: 150px;
+    background-color: gray;
+    margin: 160px auto;
+    position: relative;
+    line-height: 30px;
+    }
+  #Menu .title{
+    background-color: brown;
+    text-align: center;
+    font-family: 黑体;
+    font-weight: 500;
+    font-size: 18px;
+    color: whitesmoke
+  }
+  #Menu  .list ul{
+    list-style: none;
+  }
+  #Menu  .list ul li{
+    padding-left: 10px;
+    font-size: 15px;
+    color: burlywood;
+    position: relative;
+  }
+  #Menu  .list ul li:hover{
+    background-color: coral;
+    color: bisque}
+  li .submenu {
+    display: none;
+    background-color: cornsilk;
+    color: darkgray;
+    height: 90px;
+    width: 130px;
+    position: absolute;
+    left: 230px;
+    top: 0px;
+     }
+  .list ul li:hover .submenu{
+      display: block;
+    }
+  </style>
+ </head>
+  <body>
+    <div id="Menu">
+      <p class="title">所有商品分类</p>
+      <div class="list">
+          <ul>
+            <li>精选市场
+              <div class="submenu">
+              <ul >
+                <li>精选女装</li>
+                <li>精选早餐</li>
+                <li>精选水果</li>
+              </ul>
+            </div>
+            </li>
+            <li>女装/内衣
+                <div class="submenu">
+                    <ul >
+                      <li>女装</li>
+                      <li>精选早餐</li>
+                      <li>精选水果</li>
+                    </ul>
+                  </div>
+            </li>
+            <li>男装/运动户外
+                <div class="submenu">
+                    <ul >
+                      <li>精选女装</li>
+                      <li>精选早餐</li>
+                      <li>精选水果</li>
+                    </ul>
+                  </div>
+            </li>
+            <li>女鞋/男鞋/箱包
+                <div class="submenu">
+                    <ul >
+                      <li>精选女装</li>
+                      <li>精选早餐</li>
+                      <li>精选水果</li>
+                    </ul>
+                  </div>
+            </li>
+          </ul>
+      </div>
+    </div>
+  </body>
+</html>
